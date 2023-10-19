@@ -1,12 +1,13 @@
-function adultFilter(persons) {
-    let newArr = []
-    for (let i = 0; i < persons.length; i++) {
-        if (persons[i].age > 18) {
-            newArr.push(persons[i].name + " è maggiorenne")
-        }
+function nicknameMap(persons){
+    let newArr = [] ;
+    for (let i=0; i < persons.length; i++) {
+       newArr.push(persons[i].name + "-" + persons[i].age)
     }
     return newArr
 }
+
+
+
 const persons = [
     { name: 'Paul', age: 16 },
     { name: 'George', age: 17 },
@@ -20,6 +21,8 @@ const persons = [
     { name: 'Alice', age: 28 }
 ];
 
-const adults = adultFilter(persons);
-// console.log(persons);
-console.log(adults);
+// let mapped = persons.map((el) => persons.name + persons.age)
+  const nicknames = nicknameMap(persons);
+  console.log(persons);
+  console.log(nicknames);
+// console.log(mapped)
