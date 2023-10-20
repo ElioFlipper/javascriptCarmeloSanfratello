@@ -48,11 +48,23 @@ const notes = [
     },
 ];
 
-let uncompletedNotes = notes.filter(function uncompletedNotes(notes) {
-    let stillUncompleted = []
-    if (notes.todos === false) {
-        stillUncompleted.push(notes.todos)
-    }
-    return stillUncompleted
-})
-console.log(uncompletedNotes)
+// let uncompletedNotes = notes.filter(function uncompletedNotes(notes) {
+//     let stillUncompleted = []
+//     if (notes.todos === false) {
+//         stillUncompleted.push(notes.todos)
+//     }
+//     return stillUncompleted
+// })
+
+
+// function unCompletedNotes(notes){
+//     return notes.filter(notes => notes.todos.filter(todos => todos.done === false).length > 0)
+// }
+
+
+function unCompletedNotes(notes){
+
+	return notes.filter( notes =>  notes.todos.filter( todos => todos.done === false).length > 0)
+ 
+}
+console.log(unCompletedNotes(notes))
